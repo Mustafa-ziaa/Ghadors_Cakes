@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header and Grid Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            border-bottom: 1px solid #ddd;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+        .logo h1 {
+            font-size: 24px;
+            margin: 0;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .search {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+        }
+        .search input {
+            border: none;
+            outline: none;
+            padding: 5px;
+        }
+        .search button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            width: 70%;
+            margin: auto;
+        }
+        .item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .item img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .item:hover img {
+            transform: scale(1.1);
+        }
+        .item h2 {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+            margin: 0;
+        }
+        .item h3 {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: fit-content;
+            background-color: rgba(255, 255, 255, 0.733);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav {
+                flex-direction: column;
+                width: 100%;
+                gap: 10px;
+                margin-top: 10px;
+            }
+            nav a {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                text-align: center;
+                background-color: #f0f0f0;
+                border-radius: 4px;
+            }
+            .search {
+                width: 100%;
+                margin-top: 10px;
+            }
+            .search input {
+                flex: 1;
+            }
+        }
+
+        .footer {
+    margin-top: 20%;
+    background-color: #ffffff;
+    padding: 40px 20px;
+    width: 70%;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+}
+.footer-column {
+    padding: 0 20px; 
+    width: 300px;
+    margin: auto;
+}
+.footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #000000;
+}
+.footer-column a {
+    color: #505050;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+}
+.footer-column a:hover {
+    color: #001694;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #b0b0b0;
+}
+.social-media {
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.social-media a {
+    margin: 0 10px;
+    color: #b0b0b0;
+    text-decoration: none;
+}
+        
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/013/366/641/small/birthday-cake-silhouette-for-icon-symbol-pictogram-apps-website-art-illustration-logo-or-graphic-design-element-format-png.png" alt="Logo">
+        <h1>Ghador`s Cakes</h1>
+    </div>
+    <nav>
+        <a href="#">FIND RECIPES</a>
+        <a href="#">MEAL PLANS</a>
+        <a href="#">WELCOME</a>
+        <a href="#">SHOP</a>
+    </nav>
+    <div class="search">
+        <input type="text" placeholder="SEARCH...">
+        <button>🔍</button>
+    </div>
+</header>
+
+<div class="grid">
+    <div class="item">
+        <img src="imges/photo_1.jpg" alt="Rocky Road">
+        <h2>ROCKY ROAD</h2>
+        <h3>33$</h3>
+    </div>
+    <div class="item">
+        <img src="imges/photo_2.jpg" alt="Pumpkin Cake">
+        <h2>PUMPKIN CAKE</h2>
+        <h3>33$</h3>
+    </div>
+    <div class="item">
+        <img src="imges/photo_3.jpg" alt="Cream Cheese Frosting">
+        <h2>CREAM CHEESE FROSTING</h2>
+        <h3>33$</h3>
+    </div>
+    <div class="item">
+        <img src="imges/photo_4.jpg" alt="Easter Rocky Road">
+        <h2>EASTER ROCKY ROAD</h2>
+        <h3>33$</h3>
+    </div>
+    <div class="item">
+        <img src="imges/photo_5.jpg" alt="Yoghurt Pot Cake">
+        <h2>YOGHURT POT CAKE</h2>
+        <h3>33$</h3>
+    </div>
+    <div class="item">
+        <img src="imges/photo_6.jpg" alt="Rolo Fudge">
+        <h2>ROLO FUDGE</h2>
+        <h3>33$</h3>
+    </div>
+    <div class="item">
+        <img src="imges/photo_7.jpg" alt="Easy Apple Cake">
+        <h2>EASY APPLE CAKE</h2>
+        <h3>33$</h3>
+    </div>
+    <div class="item">
+        <img src="imges/photo_8.jpg" alt="Daim Bar Cookies">
+        <h2>DAIM BAR COOKIES</h2>
+        <h3>33$</h3>
+    </div>
+    <div class="item">
+        <img src="imges/photo_9.jpg" alt="Daim Bar Cookies">
+        <h2>DAIM BAR COOKIES</h2>
+        <h3>33$</h3>
+    </div>
+    <div class="item">
+        <img src="imges/photo_10.jpg" alt="Daim Bar Cookies">
+        <h2>DAIM BAR COOKIES</h2>
+        <h3>33$</h3>
+    </div>
+    <div class="item">
+        <img src="imges/photo_11.jpg" alt="Daim Bar Cookies">
+        <h2>DAIM BAR COOKIES</h2>
+        <h3>33$</h3>
+    </div>
+    <div class="item">
+        <img src="imges/photo_12.jpg" alt="Daim Bar Cookies">
+        <h2>DAIM BAR COOKIES</h2>
+        <h3>33$</h3>
+    </div>
+    <div class="item">
+        <img src="imges/photo_13.jpg" alt="Daim Bar Cookies">
+        <h2>DAIM BAR COOKIES</h2>
+        <h3>33$</h3>
+    </div>
+    <div class="item">
+        <img src="imges/photo_14.jpg" alt="Daim Bar Cookies">
+        <h2>DAIM BAR COOKIES</h2>
+        <h3>33$</h3>
+    </div>
+    <div class="item">
+        <img src="imges/photo_15.jpg" alt="Daim Bar Cookies">
+        <h2>DAIM BAR COOKIES</h2>
+        <h3>33$</h3>
+    </div>
+    <div class="item">
+        <img src="imges/photo_16.jpg" alt="Daim Bar Cookies">
+        <h2>DAIM BAR COOKIES</h2>
+        <h3>33$</h3>
+    </div>
+    <div class="item">
+        <img src="https://www.cakeie.com/public/images/2%20Tier%20Dark%20Chocolate%20Cake-img1-cakeie.webp" alt="Daim Bar Cookies">
+        <h2>DAIM BAR COOKIES</h2>
+        <h3>33$</h3>
+    </div>
+    <div class="item">
+        <img src="https://i1.fnp.com/images/pr/l/v20190520192511/black-forest-cake-half-kg_1.jpg" alt="Daim Bar Cookies">
+        <h2>DAIM BAR COOKIES</h2>
+        <h3>33$</h3>
+    </div>
+</div>
+
+<table class="footer">
+    <tr>
+        <td class="footer-column">
+            <h3>INFORMATION</h3>
+            <a href="#">Pricing</a>
+            <a href="#">About us</a>
+            <a href="#">API</a>
+        </td>
+        <td class="footer-column">
+            <h3>LEGAL</h3>
+            <a href="#">Terms of use</a>
+            <a href="#">License agreement</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Copyright information</a>
+        </td>
+        <td class="footer-column">
+            <h3>SOCIAL MEDIA</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </td>
+    </tr>
+    <tr class="footer-bottom">
+        <td colspan="4" style="text-align: center;">
+            <p><b>Ghador`s Cakes</b> © Copyright © <b>2025 Ghador`s Cakes</b>. All rights reserved.</p>
+            <div class="social-media">
+                <a href="#">English</a>
+                <a href="login/index.html">Login</a>
+            </div>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
